@@ -1,1 +1,2 @@
 # sanatorium
+# sanatory
