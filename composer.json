@@ -11,6 +11,7 @@
         "doctrine/doctrine-bundle": "^2.8",
         "doctrine/doctrine-migrations-bundle": "^3.2",
         "doctrine/orm": "*",
+        "dompdf/dompdf": "^2.0",
         "knplabs/knp-paginator-bundle": "^6.2",
         "phpdocumentor/reflection-docblock": "^5.3",
         "phpstan/phpdoc-parser": "^1.15",
@@ -44,6 +45,7 @@
         "symfony/webpack-encore-bundle": "^1.16",
         "symfony/yaml": "6.2.*",
         "twig/extra-bundle": "^2.12|^3.0",
+        "twig/intl-extra": "^3.7",
         "twig/twig": "^2.12|^3.0"
     },
     "config": {
@@ -82,6 +84,34 @@
         ],
         "post-update-cmd": [
             "@auto-scripts"
+        ],
+        "translations": "@php bin/console translation:extract pl --format xlf --force",
+        "app:tests": [
+            "@app:tests:static",
+            "@app:tests:automatic"
+        ],
+        "app:tests:static": [
+            "@app:tests:static:cs-fixer",
+            "@app:tests:static:psalm",
+            "@app:tests:static:phpstan"
+        ],
+        "app:tests:static:doc-sche-val": [
+            "@php bin/console doctrine:schema:validate"
+        ],
+        "app:tests:static:cs-fixer": [
+            "@php ./tools/vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php -vvv --dry-run"
+        ],
+        "app:tests:static:psalm": [
+            "@php ./tools/vendor/bin/psalm --config=psalm.xml --no-cache --show-info=true"
+        ],
+        "app:tests:static:phpstan": [
+            "@php ./tools/vendor/bin/phpstan analyse -c phpstan.neon"
+        ],
+        "app:tests:automatic": [
+            "echo 'No automatic tests yet.'"
+        ],
+        "app:cs-fixer:fix": [
+            "@php ./tools/vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php -v"
         ]
     },
     "conflict": {

@@ -1,0 +1,33 @@
+{% extends "base.html.twig" %}
+{% block body %}
+
+    <main id="main">
+        <div class="container">
+        <section id="about" class="about">
+            <div class="section-title">
+                <h2>{{ therapy_room.name }}</h2>
+                <p>Informacje o sali zabiegowej </p>
+            </div>
+
+
+
+            <table class="table table-bordered transparent-table">
+                    <tbody>
+                    <tr>
+                        <td width="40%"><strong>Nazwa sali:</strong></td>
+                        <td width="30%">{{ therapy_room.name }}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Rodzaj:</strong></td>
+                        <td>{{ therapy_room.session }}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Limit ćwiczących:</strong></td>
+                        <td>{{ therapy_room.getAttendanceLimit() }}</td>
+                    </tr>
+                    </tbody>
+                </table>
+        </section>
+        </div>
+    </main>
+{% endblock %}

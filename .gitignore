@@ -5,6 +5,7 @@
 /.env.*.local
 /config/secrets/prod/prod.decrypt.private.php
 /public/bundles/
+
 /var/
 /vendor/
 < symfony/framework-bundle ###
@@ -28,3 +29,12 @@ yarn-error.log
 < symfony/webpack-encore-bundle ###
 .env
 .env.test
+
+/vendor/
+/.idea/
+/node_modules/
+
+.php-cs-fixer.php
+phpstan.neon
+psalm.xml
+phpcs.xml

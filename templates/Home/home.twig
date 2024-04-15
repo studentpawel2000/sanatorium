@@ -1,12 +1,117 @@
 {% extends "base.html.twig" %}
-
-
 {% block body %}
-<center>Welcome in sanatory application</center>
-    
+    <style>
+        html {
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        html::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/59/Sanatorium_Rownica_interior.jpg');
+            background-size: cover;
+            filter: blur(10px);
+            z-index: -1;
+        }
+
+        body {
+            min-height: 100%;
+            position: relative;
+        }
+        .content {
+            margin-top: 100px;
+            padding: 20px;
+        }
+        .card {
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+
+        .row {
+            margin-top: 50px;
+        }
+        .logo {
+            position: absolute;
+            top: -50px;
+            left: 55%;
+            transform: translateX(-50%);
+            z-index: 2;
+        }
+
+        .logo img {
+            width: 100px; 
+        }
+    </style>
+    <main id="main">
+        <div class="logo">
+            <img src="/assets/img/logo.png" alt="Logo">
+        </div>
+
+        <div class="content">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Utwórz rezerwacje</h5>
+                        <p class="card-text">Tutaj możesz utworzyć nową rezerwację.</p>
+                        <a href="/UserReservationCreate1" class="btn btn-primary">Wybierz</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Twoje rezerwacje</h5>
+                        <p class="card-text">Sprawdź swoje aktualne rezerwacje.</p>
+                        <a href="/UserReservationListing" class="btn btn-primary">Wybierz</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Twoje opinie</h5>
+                        <p class="card-text">Zobacz swoje opinie lub dodaj nową.</p>
+                        <a href="#" class="btn btn-primary">Wybierz</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Strona główna</h5>
+                        <p class="card-text">Przejdź na stronę główną.</p>
+                        <a href="/#about" class="btn btn-primary">Wybierz</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Informacje o profilu</h5>
+                        <p class="card-text">Sprawdź informacje o swoim koncie w systemie.</p>
+                        <a href="/user" class="btn btn-primary">Wybierz</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Zobacz listę zabiegów</h5>
+                        <p class="card-text">Zobacz swoje opinie lub dodaj nową.</p>
+                        <a href="#" class="btn btn-primary">Wybierz</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </main>
 {% endblock body %}
-
-
-
-
 

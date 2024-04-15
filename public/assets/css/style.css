@@ -1,17 +1,9 @@
-/**
-* Template Name: iPortfolio - v3.10.0
-* Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #272829;
-  background: url("../img/main-bg.jpg") top center;
+  background: #151e98;
   background-size: cover;
 }
 
@@ -34,9 +26,7 @@ h6 {
   font-family: "Raleway", sans-serif;
 }
 
-/*--------------------------------------------------------------
-# Back to top button
---------------------------------------------------------------*/
+
 .back-to-top {
   position: fixed;
   visibility: hidden;
@@ -70,6 +60,7 @@ h6 {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
+
 #header {
   position: fixed;
   top: 0;
@@ -314,11 +305,11 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  color: #fff;
+  color: #151a59;
 }
 
 .section-title p {
-    color: #fff;
+    color: #151a59;
 }
 
 .section-title h2::after {
@@ -398,7 +389,7 @@ section {
   line-height: 40px;
   display: block;
   font-weight: 700;
-  color: #050d18;
+  color: #ffffff;
   margin-left: 60px;
 }
 
